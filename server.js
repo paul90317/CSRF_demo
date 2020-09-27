@@ -10,6 +10,7 @@ io.on("connection",function(socket){
 		yourname = name;
 	})
 	socket.on("transfer",function(towho,money){
-		console.log(yourname+" transfer "+money+" to "+towho);
+		if(yourname=="you")console.log(yourname+" transfer "+money+" to "+towho);
+		else console.log("transfer fail!");
 	})
 })
