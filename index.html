@@ -1,0 +1,16 @@
+<script>
+var name = document.location.href.split('?')[1];
+if(name!="you"){
+    window.location.assign("login.html");
+    alert("You need to login!");
+}
+function send(){
+    window.location.assign("transfer.html?"+document.getElementById("who").value+"&"+document.getElementById("money").value);
+}
+</script>
+<script src="login_bundle.js"></script>
+<form>
+toWho:<input type="text" id="who"/><br/>
+money:<input type="text" id ="money"/><br/>
+<input type="button" id="transfer" value="transfer" onclick="send()"/><br/>
+</form>

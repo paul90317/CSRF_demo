@@ -1,0 +1,10 @@
+<script>
+function gogo(){
+    window.location.assign("index.html?"+document.getElementById('name').value);
+}
+</script>
+<form>
+name:<input type="text" id ="name"/><br/>
+secret:<input type="text" id="secret"/><br/>
+<input type="button" id="login" value="login" onclick="gogo()"/><br/>
+</form>
